@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function Food() {
+  // eslint-disable-next-line no-unused-vars
   const [cart, setCart] = useState([]);
 
   const foods = [
@@ -69,7 +70,7 @@ function Food() {
               boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
             }}
           >
-            <img src={food.image} style={{ width: "100%", height: "180px" }} />
+            <img src={food.image} alt={food.name} style={{ width: "100%", height: "180px" }} />
 
             <div style={{ padding: "15px" }}>
               <h3>{food.name}</h3>
