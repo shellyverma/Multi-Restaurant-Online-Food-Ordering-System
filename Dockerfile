@@ -1,0 +1,7 @@
+FROM eclipse-temurin:22-jdk-alpine 
+WORKDIR /app 
+COPY foodapp/ . 
+RUN chmod +x mvnw 
+RUN ./mvnw clean package -DskipTests 
+EXPOSE 8080 
+CMD ["java", "-jar", "target/foodapp-0.0.1-SNAPSHOT.jar"]
